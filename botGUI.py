@@ -29,9 +29,12 @@ class botGUI:
         class_frame =[[sg.Frame('Class Info',class_option)]]
 
         
-        submission = [[sg.Text('Registration Time (hour:minute:second)')],
-                    [sg.Input(size =15)],
-                    [sg.Button('Run')]]
+        submission = [[sg.Text('Direct path of Chromedriver')],
+                        [sg.Text('ex. C:/Users/User/Downloads/chromedriver_win32/chromedriver.exe')],
+                        [sg.Input()],
+                        [sg.Text('Registration Time (hour:minute:second)')],
+                        [sg.Input(size =15)],
+                        [sg.Button('Run')]]
         submission_frame =[[sg.Frame('Submission',submission,element_justification='right')]]
 
         row1 =[[sg.Column(userinput),sg.Column(about)]]
@@ -49,10 +52,9 @@ class botGUI:
         while True:
             event, values = window.read()
             print(values)
-            getWeb.getData(values)
-            # End program if user closes window or
-            # presses the OK button
-            if event == sg.WIN_CLOSED:
+            if event == 'Run':
+                getWeb.getData(values)
+            elif event == sg.WIN_CLOSED:
                 break
         
 
