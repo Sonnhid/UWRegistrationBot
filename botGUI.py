@@ -9,7 +9,7 @@ class botGUI:
                 [sg.Input()],
                 [sg.Text("Passward")],
                 [sg.Input()]]
-        about =[[sg.Text("UW Regisration Bot")],
+        about =[[sg.Text("UW Regisration Bot by Sonnhi Duong")],
                 [sg.Text("Thank you for using the bot")]]
         userinput = [[sg.Frame('User Info', login)]]
 
