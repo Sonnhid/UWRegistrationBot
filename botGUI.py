@@ -31,7 +31,8 @@ class botGUI:
         
         submission = [[sg.Text('Direct path of Chromedriver')],
                         [sg.Text('ex. C:/Users/User/Downloads/chromedriver_win32/chromedriver.exe')],
-                        [sg.Input()],
+                        [sg.Input(default_text="C:/Users/User/Downloads/chromedriver_win32/chromedriver.exe",
+                                size = 60)],
                         [sg.Text('Registration Time (hour:minute:second)')],
                         [sg.Input(size =15)],
                         [sg.Button('Run')]]

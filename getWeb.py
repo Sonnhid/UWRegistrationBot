@@ -75,8 +75,8 @@ def registerDate(hour: int, min: int, sec: int):
 #main driver
 def getData(data:any):
     global driver 
-    driver = webdriver.Chrome(chrome_options=options, executable_path=(r"C:/Users/User/Downloads/chromedriver_win32/chromedriver.exe"))
-
+    
+    driver = webdriver.Chrome(chrome_options=options, executable_path=(data[26]))
     #Opens up the my uw login page
     driver.get('https://sdb.admin.uw.edu/students/uwnetid/register.asp')
 
@@ -90,7 +90,7 @@ def getData(data:any):
         addCodes(data[i+10])
         addCredit(data[i+18])
         i +=1
-
+    
     #specify registration time remember to uncomment to method
     registerDate(7,0,0)
     
