@@ -61,7 +61,7 @@ def registerDate(hour: int, min: int, sec: int):
     send_class = '/html/body/div[2]/form/input[7]'
     while(1): 
         if (t.hour == hour)and(t.minute == min)and(t.second == sec):
-            #driver.find_element_by_xpath(send_class).click()
+            driver.find_element_by_xpath(send_class).click()
             break
         else:
             t=datetime.datetime.now()
@@ -69,7 +69,7 @@ def registerDate(hour: int, min: int, sec: int):
     t=datetime.datetime.now()
     #runs for an additional 5 seconds which submits 
     while((t.second >=57)or(t.second < 2)):
-        #driver.find_element_by_xpath(send_class).click()
+        driver.find_element_by_xpath(send_class).click()
         t=datetime.datetime.now()
 
 #main driver
