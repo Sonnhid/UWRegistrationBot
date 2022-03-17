@@ -4,11 +4,12 @@ import getWeb
 class botGUI:
 
     def layout():
+        sg.theme('Dark Purple 3')
         #row 1 of layout
         login = [[sg.Text("UW ID")],
-                [sg.Input()],
+                [sg.Input(size =30)],
                 [sg.Text("Passward")],
-                [sg.Input()]]
+                [sg.Input(size =30)]]
         about =[[sg.Text("UW Regisration Bot by Sonnhi Duong")],
                 [sg.Text("Thank you for using the bot")]]
         userinput = [[sg.Frame('User Info', login)]]
@@ -29,11 +30,7 @@ class botGUI:
         class_frame =[[sg.Frame('Class Info',class_option)]]
 
         
-        submission = [[sg.Text('Direct path of Chromedriver')],
-                        [sg.Text('ex. C:/Users/User/Downloads/chromedriver_win32/chromedriver.exe')],
-                        [sg.Input(default_text="C:/Users/User/Downloads/chromedriver_win32/chromedriver.exe",
-                                size = 60)],
-                        [sg.Text('Registration Time (hour:minute:second)')],
+        submission = [[sg.Text('Registration Time (hour:minute:second)')],
                         [sg.Input(size =15)],
                         [sg.Button('Run')]]
         submission_frame =[[sg.Frame('Submission',submission,element_justification='right')]]

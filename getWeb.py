@@ -2,6 +2,8 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 
 import datetime
 
@@ -75,8 +77,7 @@ def registerDate(hour: int, min: int, sec: int):
 #main driver
 def getData(data:any):
     global driver 
-    
-    driver = webdriver.Chrome(chrome_options=options, executable_path=(data[26]))
+    driver = webdriver.Chrome(chrome_options =options,service=Service(ChromeDriverManager().install()))
     #Opens up the my uw login page
     driver.get('https://sdb.admin.uw.edu/students/uwnetid/register.asp')
 
