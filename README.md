@@ -1,21 +1,36 @@
-# UWRegistrationBot
-by Sonnhi Duong 
+# UWRegistrationBot by Sonnhi Duong
 
-Thank you for using the bot, but use at your own risk
+## A bot that automatically registers for classes at UW
+I have never used the bot and will continue doing so.
+This bot takes your loging information, class codes, and registration time.
+One Minute before the registration time, if will fire up the browser and load in all
+your inputs. Roughly around 3 seconds before the registration time, the bot will spam 
+the submit button with your class information.
 
-This Bot takes your UW login and codes for the classes you are going to take.
-Make sure that al lof the information is correct before registration day. 
-The bot tends to stop working if there is an invalid input.
-I recomend running the bot the day of registration or just before it. 
+This was my personal project using python scripts. 
+Some of the main libraries I used was Selenium and SimplePyGUI
+Use at your own risk.
 
-How it Works:
-After pressing the run button and making sure that all inputs are valid,
-The bot will wait til the specified registration time.
-30 seconds before the time, it will open up UW and put in all the class codes.
-5 seconds before the time, it will start submitting for until classes are registered.
+## Installation
+Install the repo's zip file and extract its contents
+Run the Driver executable in the dist folder
 
-Requirments:
-Before actually running, chrome driver would need to be installed to your computer.
-Remember to add its path to your computer environment variables and 
-specicify the path in the bot.
-This will make it so the bot can send data and interact with the website. 
+## Usage
+Once running the UI for the bot will pop up 
+Input your login information for your UW Student account and 
+fill out the class codes under SLN and your add codes if any for the class
+The credit column is optional and is only for variable credit classes
+Make sure to use the dropdown and pick the registration time CORRECTLY
+Verify all your information is correct before running or else it will not work
+
+Once running the window will close and will run again when its close to the registration date.
+You can leave the program running in the background while you do other things
+
+## How to Contribute
+Any contributions are greatly appreciated
+Some of the things I have yet to get to are
+  Testing 
+  Debugging
+  Better GUI
+  Registration Day input 
+  
