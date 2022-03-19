@@ -51,24 +51,23 @@ def addCredit(credit_code: str):
     if credit_box <=8:
         credit_box += 1
 
-#runs until it is 5 seconds before the given registration date
+#runs until it is 3 seconds before the given registration date
 #it will then continously submit codes until classes are registered
 def registerDate(hour: int, min: int):
     t=datetime.datetime.now()
-    #starts the registering 5 seconds before actual date
     send_class = '/html/body/div[2]/form/input[7]'
+    #Checks it is 3 seconds before the registration date
     while(1): 
-        if (t.second == 56):
-            #driver.find_element_by_xpath(send_class).click()
+        if (t.second == 57):
+            driver.find_element_by_xpath(send_class).click()
             break
         else:
             t=datetime.datetime.now()
     
     t=datetime.datetime.now()
     #runs for an additional 5 seconds which submits 
-    while((t.second >=56)or(t.second < 2)):
-        print(t.second)
-        #driver.find_element_by_xpath(send_class).click()
+    while((t.second >=57)or(t.second <= 2)):
+        driver.find_element_by_xpath(send_class).click()
         t=datetime.datetime.now()
 
 #main driver
