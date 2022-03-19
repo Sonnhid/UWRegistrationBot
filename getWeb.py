@@ -53,25 +53,22 @@ def addCredit(credit_code: str):
 
 #runs until it is 5 seconds before the given registration date
 #it will then continously submit codes until classes are registered
-def registerDate(hour: int, min: int, sec: int):
+def registerDate(hour: int, min: int):
     t=datetime.datetime.now()
-    print(hour,min,sec)
-
     #starts the registering 5 seconds before actual date
-    sec = 55
-    min = min - 1
     send_class = '/html/body/div[2]/form/input[7]'
     while(1): 
-        if (t.hour == hour)and(t.minute == min)and(t.second == sec):
-            driver.find_element_by_xpath(send_class).click()
+        if (t.second == 56):
+            #driver.find_element_by_xpath(send_class).click()
             break
         else:
             t=datetime.datetime.now()
     
     t=datetime.datetime.now()
     #runs for an additional 5 seconds which submits 
-    while((t.second >=57)or(t.second < 2)):
-        driver.find_element_by_xpath(send_class).click()
+    while((t.second >=56)or(t.second < 2)):
+        print(t.second)
+        #driver.find_element_by_xpath(send_class).click()
         t=datetime.datetime.now()
 
 #main driver
@@ -93,7 +90,7 @@ def getData(data:any):
         i +=1
     
     #specify registration time remember to uncomment to method
-    registerDate(7,0,0)
+    registerDate(int(data[26]),int(data[27]))
     
     
 
