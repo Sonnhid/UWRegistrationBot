@@ -1,35 +1,36 @@
 # UWRegistrationBot by Sonnhi Duong
 
-## A bot that automatically registers for classes at UW
-This bot takes your loging information, class codes, and registration time.
-One Minute before the registration time, if will fire up the browser and load in all.
-your inputs. Roughly around 3 seconds before the registration time, the bot will spam.
-the submit button with your class information.
+## Overview
+**UWRegistrationBot** is a Python-based tool that automatically registers for classes at the University of Washington.  
+The bot takes your login information, class codes, and registration time.  
 
-This was my personal project using python scripts. 
-Some of the main libraries I used was Selenium and SimplePyGUI.
-Use at your own risk.
+One minute before your specified registration time, it opens a browser and loads your inputs. Roughly 3 seconds before registration, the bot repeatedly clicks the submit button to maximize the chance of successful enrollment.  
+
+This project was developed as a personal Python project using libraries such as **Selenium** and **PySimpleGUI**.  
+**Use at your own risk.**
+
+---
 
 ## Installation
-  * Install the repo's zip file and extract its contents
-  * Run the Driver executable in the dist folder
+1. Download the repository ZIP file and extract its contents.  
+2. Run the `Driver` executable located in the `dist` folder.  
+
+---
 
 ## Usage
-Once running the UI for the bot will pop up, 
-Input your login information for your UW Student account and 
-fill out the class codes under SLN and your add codes if any for the class.
-The credit column is optional and is only for variable credit classes.
-Make sure to use the dropdown and pick the registration time CORRECTLY.
-Verify all your information is correct before running or else it will not work.
+1. Launch the program; a UI window will appear.  
+2. Enter your UW Student account login information.  
+3. Fill in the class codes under **SLN**, and add any add codes if applicable.  
+4. The **Credit** column is optional and should only be used for variable-credit classes.  
+5. Use the dropdown menu to select the correct registration time.  
+6. Double-check all information before starting; incorrect inputs will prevent registration.  
 
-Once running the window will close and will run again when its close to the registration date.
-You can leave the program running in the background while you do other things.
+Once running, the window will close automatically and reopen when registration time approaches. The program can run in the background while you continue other tasks.  
 
-## How to Contribute
-Any contributions are greatly appreciated.
-Some of the things I have yet to get to are.
-  * Testing 
-  * Debugging
-  * Better GUI
-  * Registration Day input 
-  
+---
+
+## Contributing
+Contributions are welcome! Areas for improvement include:  
+- Testing and debugging  
+- Enhancing the GUI  
+- Adding more flexible registration date inputs  
