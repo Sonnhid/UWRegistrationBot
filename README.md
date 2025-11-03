@@ -1,7 +1,6 @@
 # UWRegistrationBot by Sonnhi Duong
 
 ## A bot that automatically registers for classes at UW
-I have never used the bot and will continue doing so.
 This bot takes your loging information, class codes, and registration time.
 One Minute before the registration time, if will fire up the browser and load in all.
 your inputs. Roughly around 3 seconds before the registration time, the bot will spam.
